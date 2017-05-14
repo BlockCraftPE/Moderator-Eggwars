@@ -116,7 +116,7 @@
           }else{
 	    switch (strtolower($args[0])):
 		  case 'on':
-		  	if($sender->getLevel()->getFolderName() === "Lobby"){
+		  	if($sender->getLevel()->getFolderName() === "ELobby"){
 				if(!(isset($args[1]))) {
 					$sender->sendMessage(TF::RED . "/spectate on <player>");
 				}else{	
@@ -171,7 +171,7 @@
 				foreach ($this->getServer()->getOnlinePlayers()  as $d) {
 					$d->showPlayer($sender);
 				}
-				$sender->teleport(new Position("-0.491200", "77.000000", "9.780400", $this->getServer()->getLevelByName("Lobby")), "179", "-3");
+				$sender->teleport(new Position("1000", "30", "-10", $this->getServer()->getLevelByName("ELobby")));
 		  	}else{
 				$sender->sendMessage(TF::RED . "You are not in spectator mode!");
 			} 
